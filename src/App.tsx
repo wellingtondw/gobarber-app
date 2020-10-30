@@ -1,12 +1,13 @@
 import React from 'react'
 
-import { View, Text } from 'react-native'
+import { View, StatusBar } from 'react-native'
 
 const App = () => {
     return (
-        <View>
-            <Text>Hello World</Text>
-        </View>
+    <>
+        <StatusBar barStyle='light-content' backgroundColor='#312e38'/>
+        <View style={{ flex: 1, backgroundColor: '#312e38'}}/>
+    </>
     )
 }
 
