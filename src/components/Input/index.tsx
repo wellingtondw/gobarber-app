@@ -29,7 +29,6 @@ const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
   ref,
 ) => {
   const inputElementRef = useRef<any>(null);
-  inputElementRef;
 
   const { registerField, defaultValue = '', fieldName, error } = useField(name);
   const inputValueRef = useRef<InputValueReference>({ value: defaultValue });
@@ -70,7 +69,7 @@ const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
   }, []);
 
   return (
-    <Container isFocused={isFocused}>
+    <Container isFocused={isFocused} isErrored={!!error}>
       <Icon
         name={icon}
         size={20}
